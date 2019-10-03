@@ -159,7 +159,7 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 <p dir="rtl">
 يعد هذا مؤشراً قوياً على وجود شكل من أشكال تقنية فحص الحزم العميقة (DPI) التي تستشم TLS والتي من المرجح أن تكون بصمة حقل SNI الخاص بمصافحة TLS.
   </p>
-<p align="right" dir="rtl">  
+<p dir="rtl">  
   
 ## قناة الحرة
 
