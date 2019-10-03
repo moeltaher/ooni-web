@@ -16,17 +16,19 @@ categories: ["report"]
 <p dir="rtl">
 في هذا التقرير ، <a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.bbc.com&amp;probe_cc=EG">نشارك بيانات قياسات OONI  لاختبارات bbc.com و alhurra.com </a>، ونشرح كيف تم تنفيذ الحجب على المستوى التقني. نشارك أيضًا بعض التوصيات حول ما يمكن لمالكي مواقع الويب القيام به لتحسين مقاومة مواقعهم للرقابة على الإنترنت.
 </p>
-<p dir="rtl">  
+<p align="right" dir="rtl">  
   
 ## الفهرس
 
 </p>
 <p dir="rtl">  
 * بي بي سي
+</br>
 * قناة الحرة
+</br>
 * خاتمة
 </p>
-<p dir="rtl">
+<p align="right" dir="rtl">  
   
 ## بي بي سي
 
@@ -152,7 +154,7 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 <p dir="rtl">
 يعد هذا مؤشراً قوياً على وجود شكل من أشكال تقنية فحص الحزم العميقة (DPI) التي تستشم TLS والتي من المرجح أن تكون بصمة حقل SNI الخاص بمصافحة TLS.
   </p>
-  <p dir="rtl">
+<p align="right" dir="rtl">  
   
 ## قناة الحرة
 
@@ -266,8 +268,10 @@ curl: (56) Recv failure: Connection reset by peer
 <p dir="rtl">
 
 تقدم هذه النتائج مؤشرا قويا على أن الحجب يحدث عن طريق تصفية SNI.
+
 </p>
-<p dir="rtl">
+
+<p align="right" dir="rtl">  
   
 ## خاتمة
 
