@@ -33,9 +33,11 @@ categories: ["report"]
 ## بي بي سي
 
 </p>
+
 <p dir="rtl">  
 <a href="https://explorer.ooni.org/search?until=2019-09-26&amp;probe_cc=EG&amp;test_name=web_connectivity">تُجمع قياسات</a> بي بي سي ومئات المواقع الإعلامية الأخرى المُعرّضة للرقابة في مصر بانتظام ،إلى حد ما، من خلال استخدام<a href="https://ooni.io/install/"> OONI Probe</a>. على وجه التحديد ، يتضمن OONI Probe اختبارًا يسمى <a href="https://ooni.io/nettest/web-connectivity/">Web Connectivity</a> - مصممًا لقياس حظر DNS و TCP / IP و HTTP لمواقع الويب. كشف هذا الاختبار <a href="https://ooni.io/documents/Egypt-Internet-Censorship-AFTE-OONI-2018-07.pdf">من قبل عن حجب مئات المواقع الإعلامية في مصر</a>.
 </p>
+
 <p dir="rtl">
 اعتبارًا من 22 سبتمبر 2019 (بالتزامن مع احتجاجات مصر في نهاية الأسبوع الماضي) ، بدأت قياسات OONI<a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.bbc.com&amp;probe_cc=EG"> تُظهر علامات تشويش عند اختبار موقع bbc.com في مصر.</a>
 </p>
@@ -166,6 +168,10 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 
 ![Chart: Blocking of BBC and Alhurra in Egypt](/post/egypt-internet-censorship/eg-bbc-alhurra-2019.png)
 
+</p>
+
+<p dir="rtl">
+
 المصدر: قياسات OONI: مصر ، <a href="https://explorer.ooni.org/search%D8%9Funtil=2019-09-26&amp;probe_cc=EG">https://explorer.ooni.org/search؟until=2019-09-26&amp;probe_cc=EG</a>
 
 </p>
@@ -173,16 +179,20 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 <p dir="rtl">
 
 تعرض جميع قياسات OONI التي جُمعت في 22 سبتمبر 2019 نفس النوع من http_experiment_failure (connection_reset) ، مما يشير بقوة إلى أن موقع alhurra.com قد حُجب. نلاحظ هذه الحالات الشاذة على شبكتين تم اختبارهما:<a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.alhurra.com&amp;probe_cc=EG&amp;probe_asn=AS36935&amp;test_name=web_connectivity"> فودافون مصر (AS36935)</a> و <a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.alhurra.com&amp;probe_cc=EG&amp;probe_asn=AS8452&amp;test_name=web_connectivity">المصرية للاتصالات (AS8452).</a>
+
 </p>
 
-  <p dir="rtl">
+<p dir="rtl">
 
 لتأكيد نتائج قياس OONI وفحصها أكثر ، أجرينا أيضًا اختبارات يدوية من شبكة المصرية للاتصالات (AS8452) وتوصلنا إلى استنتاجات مشابهة جدًا لتلك الخاصة بموقع bbc.com.
 </p>
-  <p dir="rtl">
+
+<p dir="rtl">
 
 يؤدي الاتصال بخادم غير ذي صلة ، ولكن باستخدام نطاق www.alhurra.com في مصافحة TLS ، إلى اتصال غير ناجح ، كما هو موضح أدناه.
+
 </p>
+
 <p dir="ltr">
 
 
