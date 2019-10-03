@@ -46,8 +46,11 @@ categories: ["report"]
 </p>
 <p dir="rtl">
 لدعم هذه النتائج بشكل أكبر ، قمنا بالتنسيق مع مجموعات في مصر لجمع المزيد من البيانات عبر الاختبارات اليدوية (التي أجريت على المصرية للاتصالات).
+  
 </p>
+
 <p dir="ltr">
+  
 ```
 curl -v --connect-to ::www.kernel.org: https://www.bbc.com/arabic
 * Connecting to hostname: www.kernel.org
@@ -161,12 +164,12 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 ## قناة الحرة
 
 </p>
-  <p dir="rtl">
+<p dir="rtl">
 في حالةAlhurra ، نلاحظ أيضًا أنه اعتبارًا من 22 سبتمبر 2019 ، فشلت محاولات الاتصال بالموقع بشكل ثابت ، كما هو موضح في الرسم البياني التالي.
 </p>
 <p dir="rtl">
 
-![Chart: Blocking of BBC and Alhurra in Egypt](/post/egypt-internet-censorship/eg-bbc-alhurra-2019.png)
+![رسم بياني: حجب بي بي سي وقناة الحرة في مصر](/post/egypt-internet-censorship/eg-bbc-alhurra-2019.png)
 
 </p>
 
