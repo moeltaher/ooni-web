@@ -164,9 +164,13 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 ## قناة الحرة
 
 </p>
+
 <p dir="rtl">
+  
 في حالةAlhurra ، نلاحظ أيضًا أنه اعتبارًا من 22 سبتمبر 2019 ، فشلت محاولات الاتصال بالموقع بشكل ثابت ، كما هو موضح في الرسم البياني التالي.
+
 </p>
+
 <p dir="rtl">
 
 ![رسم بياني: حجب بي بي سي وقناة الحرة في مصر](/post/egypt-internet-censorship/eg-bbc-alhurra-2019.png)
