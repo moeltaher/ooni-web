@@ -17,14 +17,21 @@ categories: ["report"]
 في هذا التقرير ، <a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.bbc.com&amp;probe_cc=EG">نشارك بيانات قياسات OONI  لاختبارات bbc.com و alhurra.com </a>، ونشرح كيف تم تنفيذ الحجب على المستوى التقني. نشارك أيضًا بعض التوصيات حول ما يمكن لمالكي مواقع الويب القيام به لتحسين مقاومة مواقعهم للرقابة على الإنترنت.
 </p>
 <p dir="rtl">  
+  
 ## الفهرس
 
+</p>
+<p dir="rtl">  
 * بي بي سي
 * قناة الحرة
 * خاتمة
 </p>
 <p dir="rtl">
+  
 ## بي بي سي
+
+</p>
+<p dir="rtl">  
 <a href="https://explorer.ooni.org/search?until=2019-09-26&amp;probe_cc=EG&amp;test_name=web_connectivity">تُجمع قياسات</a> بي بي سي ومئات المواقع الإعلامية الأخرى المُعرّضة للرقابة في مصر بانتظام ،إلى حد ما، من خلال استخدام<a href="https://ooni.io/install/"> OONI Probe</a>. على وجه التحديد ، يتضمن OONI Probe اختبارًا يسمى <a href="https://ooni.io/nettest/web-connectivity/">Web Connectivity</a> - مصممًا لقياس حظر DNS و TCP / IP و HTTP لمواقع الويب. كشف هذا الاختبار <a href="https://ooni.io/documents/Egypt-Internet-Censorship-AFTE-OONI-2018-07.pdf">من قبل عن حجب مئات المواقع الإعلامية في مصر</a>.
 </p>
 <p dir="rtl">
@@ -146,20 +153,31 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 يعد هذا مؤشراً قوياً على وجود شكل من أشكال تقنية فحص الحزم العميقة (DPI) التي تستشم TLS والتي من المرجح أن تكون بصمة حقل SNI الخاص بمصافحة TLS.
   </p>
   <p dir="rtl">
+  
 ## قناة الحرة
-في حالة Alhurra ، نلاحظ أيضًا أنه اعتبارًا من 22 سبتمبر 2019 ، فشلت محاولات الاتصال بالموقع بشكل ثابت ، كما هو موضح في الرسم البياني التالي.
+
+</p>
+  <p dir="rtl">
+في حالةAlhurra ، نلاحظ أيضًا أنه اعتبارًا من 22 سبتمبر 2019 ، فشلت محاولات الاتصال بالموقع بشكل ثابت ، كما هو موضح في الرسم البياني التالي.
 </p>
 <p dir="rtl">
 
 ![Chart: Blocking of BBC and Alhurra in Egypt](/post/egypt-internet-censorship/eg-bbc-alhurra-2019.png)
 
-المصدر: قياسات OONI: مصر ، <a href="https://explorer.ooni.org/search%D8%9Funtil=2019-09-26&amp;probe_cc=EG">https://explorer.ooni.org/search؟until=2019-09-26&amp;probe_cc=EG</a></p>
+المصدر: قياسات OONI: مصر ، <a href="https://explorer.ooni.org/search%D8%9Funtil=2019-09-26&amp;probe_cc=EG">https://explorer.ooni.org/search؟until=2019-09-26&amp;probe_cc=EG</a>
+
+</p>
 
 <p dir="rtl">
 
 تعرض جميع قياسات OONI التي جُمعت في 22 سبتمبر 2019 نفس النوع من http_experiment_failure (connection_reset) ، مما يشير بقوة إلى أن موقع alhurra.com قد حُجب. نلاحظ هذه الحالات الشاذة على شبكتين تم اختبارهما:<a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.alhurra.com&amp;probe_cc=EG&amp;probe_asn=AS36935&amp;test_name=web_connectivity"> فودافون مصر (AS36935)</a> و <a href="https://explorer.ooni.org/search?until=2019-09-26&amp;domain=www.alhurra.com&amp;probe_cc=EG&amp;probe_asn=AS8452&amp;test_name=web_connectivity">المصرية للاتصالات (AS8452).</a>
+</p>
+
+  <p dir="rtl">
 
 لتأكيد نتائج قياس OONI وفحصها أكثر ، أجرينا أيضًا اختبارات يدوية من شبكة المصرية للاتصالات (AS8452) وتوصلنا إلى استنتاجات مشابهة جدًا لتلك الخاصة بموقع bbc.com.
+</p>
+  <p dir="rtl">
 
 يؤدي الاتصال بخادم غير ذي صلة ، ولكن باستخدام نطاق www.alhurra.com في مصافحة TLS ، إلى اتصال غير ناجح ، كما هو موضح أدناه.
 </p>
@@ -182,10 +200,13 @@ curl -v --connect-to ::www.kernel.org: https://www.alhurra.com/
 curl: (35) Encountered end of file
 ```
 </p>
+
 <p dir="rtl">
 
 على العكس ، نحن قادرون على إنشاء اتصال بـ www.alhurra.com إذا استخدمنا نطاقا مختلفًا في مصافحة TLS.
+
 </p>
+
 <p dir="ltr">
 
 
@@ -241,20 +262,38 @@ curl: (56) Recv failure: Connection reset by peer
         <title>The Linux Kernel Archives</title>
 ```
 </p>
+
 <p dir="rtl">
 
 تقدم هذه النتائج مؤشرا قويا على أن الحجب يحدث عن طريق تصفية SNI.
 </p>
 <p dir="rtl">
-
+  
 ## خاتمة
+
+</p>
+
+<p dir="rtl">
+
 وسط الاحتجاجات ، حُجب كل من bbc.com و alhurra.com في مصر في 22 سبتمبر 2019 ، وذلك طبقا لقياسات OONI واختبار curl اليدوي.
 
+</p>
+
+<p dir="rtl">
+
 خلال التحقيقات السابقة ، <a href="https://ooni.io/documents/Egypt-Internet-Censorship-AFTE-OONI-2018-07.pdf">وجدنا</a> أن مزودي خدمة الإنترنت المصريين يعيدون ضبط الاتصالات (reset connection) من خلال استخدام معدات الفحص الدقيق للحزم (DPI). يشير الاختبار اليدوي الذي تم إجراؤه على bbc.com و alhurra.com إلى أنه من المُرجّح أن الرقابة على الإنترنت (على الأقل في TEData) تُنفّذ عن طريق الفحص الدقيق للحزم (DPI).
+</p>
+<p dir="rtl">
 
 استنادًا إلى النتائج التي جمعناها ، يبدو أن bbc.com و allhurra.com يمكنهما الاستفادة من دعم SNI المُعمّى على خوادمهما الخلفية. بالقيام بذلك ، قد يكون من الممكن التحايل على الحجب ، على افتراض أن المتصفح المُستخدم يدعم هذه الميزة (يدعمها Firefox حاليًا).
+</p>
+
+<p dir="rtl">
 
 نظرً<a href="https://www.theguardian.com/world/2019/sep/26/over-1900-arrested-as-egypt-braces-for-more-protests">ا للتخطيط لمزيد من الاحتجاجات غدًا</a> ، 27 سبتمبر 2019 ، هناك خطر من احتمال حدوث المزيد من الرقابة في مصر. يمكن التوسع في هذه الدراسة من خلال استخدام<a href="https://ooni.io/install/"> OONI Probe</a> لمزيد من الاختبارات. و يمكن استخدام <a href="https://run.ooni.io/">OONI Run</a> لإنشاء روابط قابلة للمشاركة تتيح الاختبار المنسق لمواقع محددة. تُنشر <a href="https://ooni.io/data/">جميع قياسات شبكة OONI</a> بشكل مفتوح يوميًا.
+
+</p>
+<p dir="rtl">
 
 نشكر جميع مستخدمي OONI Probe في مصر الذين جعلوا هذه الدراسة ممكنة.
 </p>
