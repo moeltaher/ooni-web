@@ -68,12 +68,15 @@ curl: (35) Encountered end of file
 ```
 
 </p>
+
 <p dir="rtl">
 يمكننا أن نرى أنه حتى عند الاتصال بخادم غير ذي صلة (www.kernel.org) ، ولكن عند محاولة مصافحة TLS لـ www.bbc.com ، قُطع الاتصال أثناء المصافحة.
 </p>
 <p dir="rtl">
 من ناحية أخرى ، عندما نتصل بـ bbc.com مباشرة ، لكننا نستخدم www.kernel.org في مصافحة TLS ، يمر الاتصال ، كما هو واضح في المقتطف التالي من curl request:
+  
 </p>
+
 <p dir="ltr">
 
 ```
@@ -155,10 +158,14 @@ curl -v --connect-to :: www.bbc.com: https://www.kernel.org
 <head>
 [ SNIP ]
 ```
+
 </p>
+
 <p dir="rtl">
+  
 يعد هذا مؤشراً قوياً على وجود شكل من أشكال تقنية فحص الحزم العميقة (DPI) التي تستشم TLS والتي من المرجح أن تكون بصمة حقل SNI الخاص بمصافحة TLS.
-  </p>
+
+</p>
 <p dir="rtl">  
   
 ## قناة الحرة
